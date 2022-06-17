@@ -13,7 +13,6 @@ export class UserService {
     page?: number;
     take?: number;
   }): Promise<GenericResponse> {
-
     const take = Math.abs(Number(params.take)) || DEFAULT_LIMIT;
     const page = Math.abs(Number(params.page)) || 1;
     const skip = take * (page - 1);
